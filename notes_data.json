@@ -129,6 +129,16 @@
             "id": "26a6b97f-f8bd-4cdf-9267-dea2c4621c56",
             "text": "Voice Assistant",
             "date": "2024-06-15T19:00:18.140Z"
+        },
+        {
+            "id": "894c2983-cdb4-42a3-b441-bce8b9ebea92",
+            "text": "Deodorant",
+            "date": "2024-06-15T19:10:48.156Z"
+        },
+        {
+            "id": "74ed61d0-45e9-4b4b-a9a7-839f1bddb09c",
+            "text": "Milk - local",
+            "date": "2024-06-15T19:11:09.336Z"
         }
     ],
     "connections": [
@@ -307,6 +317,22 @@
             ],
             "reason": "Straightforward",
             "date": "2024-06-15T19:00:27.395Z"
+        },
+        {
+            "ids": [
+                "894c2983-cdb4-42a3-b441-bce8b9ebea92",
+                "a94cc10b-b364-447e-95bd-db133e4a85e0"
+            ],
+            "reason": "Almost gone",
+            "date": "2024-06-15T19:11:22.987Z"
+        },
+        {
+            "ids": [
+                "74ed61d0-45e9-4b4b-a9a7-839f1bddb09c",
+                "a94cc10b-b364-447e-95bd-db133e4a85e0"
+            ],
+            "reason": "Better",
+            "date": "2024-06-15T19:11:33.756Z"
         }
     ]
 }
