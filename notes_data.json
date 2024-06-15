@@ -71,11 +71,6 @@
             "date": "2024-06-15T16:06:05.474Z"
         },
         {
-            "id": "da0bac4d-b14c-4631-b083-ecb1d9eeb776",
-            "text": "Go shopping",
-            "date": "2024-06-15T16:06:48.202Z"
-        },
-        {
             "id": "d6cb0fbf-1646-4ca3-a032-c063cc7a63b4",
             "text": "Workshop",
             "date": "2024-06-15T16:09:43.366Z"
@@ -183,14 +178,6 @@
             ],
             "reason": "Arm",
             "date": "2024-06-15T16:06:28.055Z"
-        },
-        {
-            "ids": [
-                "3eb0a7cf-7e57-4e79-829c-7c8a6f09108b",
-                "da0bac4d-b14c-4631-b083-ecb1d9eeb776"
-            ],
-            "reason": "LIDL",
-            "date": "2024-06-15T16:06:57.872Z"
         },
         {
             "ids": [
