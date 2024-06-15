@@ -179,6 +179,11 @@
             "id": "f4dbeeb7-5550-4e19-8fa4-5c5316e13971",
             "text": "Bedding",
             "date": "2024-06-15T19:55:56.763Z"
+        },
+        {
+            "id": "57b4e6ed-6fe4-4e3d-849f-e6726d811b46",
+            "text": "Brushless motors",
+            "date": "2024-06-15T20:36:13.360Z"
         }
     ],
     "connections": [
@@ -453,6 +458,14 @@
             ],
             "reason": "Have more pcs",
             "date": "2024-06-15T19:56:11.541Z"
+        },
+        {
+            "ids": [
+                "4ca824a3-dd22-435a-b8cc-aa9362e84565",
+                "57b4e6ed-6fe4-4e3d-849f-e6726d811b46"
+            ],
+            "reason": "Start with",
+            "date": "2024-06-15T20:36:22.112Z"
         }
     ]
 }
