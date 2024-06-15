@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vis.js Network</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="mynetwork"></div>
+    <script>
+        let network, nodes, edges;
+
+        // Function to fetch data from the Flask server
+        async function fetchData() {
+            const response = await fetch('/data');
+            return response.json();
+        }
+
+        // Function to save data to the Flask server
+        async function saveData() {
+            const data = {
+                notes: nodes.get().map(node => ({ id: node.id, text: node.label, date: node.date })),
+                connections: edges.get().map(edge => ({ ids: [edge.from, edge.to], reason: edge.label, date: edge.date }))
+            };
+            const response = await fetch('/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            if (response.ok) {
+                alert('Data saved successfully!');
+            } else {
+                alert('Error saving data.');
+            }
+        }
+
+        fetchData().then(data => {
+            try {
+                nodes = new vis.DataSet(data.notes.map(note => ({
+                    id: note.id,
+                    label: note.text,
+                    date: note.date
+                })));
+
+                edges = new vis.DataSet(data.connections.map(conn => ({
+                    from: conn.ids[0],
+                    to: conn.ids[1],
+                    label: conn.reason,
+                    date: conn.date
+                })));
+
+                const container = document.getElementById('mynetwork');
+                const networkData = { nodes, edges };
+                const options = {
+                    interaction: {
+                        dragNodes: true,  // Allow node dragging
+                        dragView: true,  // Allow dragging the view (panning)
+                        hover: true  // Change cursor style on hover
+                    },
+                    physics: {
+                        enabled: true,  // Enable physics
+                        stabilization: {
+                            enabled: true,
+                            iterations: 1000  // Number of stabilization iterations
+                        }
+                    },
+                    manipulation: {
+                        enabled: true,
+                        initiallyActive: true,
+                        addNode: function (data, callback) {
+                            var text = prompt("Enter text for new node:", "New Node");
+                            if (text) {
+                                data.label = text;
+                                data.date = new Date().toISOString();  // Add the current date
+                                callback(data);
+                            }
+                        },
+                        editNode: function (data, callback) {
+                            var text = prompt("Edit text for node:", data.label);
+                            if (text) {
+                                data.label = text;
+                                callback(data);
+                            }
+                        },
+                        addEdge: function (data, callback) {
+                            if (data.from === data.to) {
+                                var r = confirm("Do you want to connect the node to itself?");
+                                if (r === true) {
+                                    var text = prompt("Enter text for new edge:", "New Edge");
+                                    if (text) {
+                                        data.label = text;
+                                        data.date = new Date().toISOString();  // Add the current date
+                                        callback(data);
+                                    }
+                                }
+                            } else {
+                                var text = prompt("Enter text for new edge:", "New Edge");
+                                if (text) {
+                                    data.label = text;
+                                    data.date = new Date().toISOString();  // Add the current date
+                                    callback(data);
+                                }
+                            }
+                        },
+                        editEdge: {
+                            editWithoutDrag: function (data, callback) {
+                                var text = prompt("Edit text for edge:", data.label);
+                                if (text) {
+                                    data.label = text;
+                                    callback(data);
+                                }
+                            }
+                        },
+                        deleteNode: true,
+                        deleteEdge: true,
+                        controlNodeStyle: {
+                            // All node styles
+                        }
+                    }
+                };
+
+                network = new vis.Network(container, networkData, options);
+
+                // Add custom Save button
+                network.on("afterDrawing", function() {
+                    const toolbar = container.querySelector(".vis-manipulation");
+                    if (toolbar && !toolbar.querySelector(".vis-save")) {
+                        const saveButton = document.createElement("button");
+                        saveButton.innerHTML = "Save";
+                        saveButton.className = "vis-button vis-save";
+                        saveButton.onclick = saveData;
+                        toolbar.appendChild(saveButton);
+                    }
+                });
+
+                network.on("selectEdge", function (params) {
+                    const edgeId = params.edges[0];
+                    console.log('Edge selected:', edgeId);
+                });
+
+                network.on("deselectEdge", function (params) {
+                    console.log('Edge deselected');
+                });
+
+            } catch (error) {
+                console.error('Error initializing network:', error);
+            }
+        }).catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+        // Function to handle window resize
+        window.addEventListener('resize', function() {
+            const container = document.getElementById('mynetwork');
+            network.setSize(container.clientWidth + 'px', container.clientHeight + 'px');
+            network.redraw();
+        });
+    </script>
+</body>
+</html>

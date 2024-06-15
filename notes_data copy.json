@@ -1,0 +1,37 @@
+{
+    "notes": [
+        {
+            "text": "Metal Foundry",
+            "date": "2024-06-15T02:27:52.354092",
+            "id": "ee759463-f999-45d7-8732-f87edd7ea2ec"
+        },
+        {
+            "text": "Molding hungarocell",
+            "date": "2024-06-15T02:28:12.074246",
+            "id": "41c40cb5-2b8a-45a8-a4bf-aeefc942d720"
+        },
+        {
+            "text": "Create aluminum mold",
+            "date": "2024-06-15T02:28:25.791221",
+            "id": "766100ac-2a03-4a55-b78a-6c7a4029075f"
+        }
+    ],
+    "connections": [
+        {
+            "reason": "Hungarocell is easiest way of molding metal. Just put it in sand peaking out a little and pour the metal on top.",
+            "ids": [
+                "ee759463-f999-45d7-8732-f87edd7ea2ec",
+                "41c40cb5-2b8a-45a8-a4bf-aeefc942d720"
+            ],
+            "date": "2024-06-15T02:29:25.791221"
+        },
+        {
+            "reason": "We need to cook hungarocell pallets so they extrude and fuse together given sufficiently not enough space.. we need to cook into the shape we dream of. Aluminum mold is nice for that.",
+            "ids": [
+                "41c40cb5-2b8a-45a8-a4bf-aeefc942d720",
+                "766100ac-2a03-4a55-b78a-6c7a4029075f"
+            ],
+            "date": "2024-06-15T02:30:25.791221"
+        }
+    ]
+}
