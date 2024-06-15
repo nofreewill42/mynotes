@@ -114,6 +114,21 @@
             "id": "faa7664c-6037-4eca-ae90-7dccec6cef3b",
             "text": "Peanut butter",
             "date": "2024-06-15T18:47:30.343Z"
+        },
+        {
+            "id": "450601b6-df2f-480c-ba01-6a3025e34603",
+            "text": "Haircutter Razor",
+            "date": "2024-06-15T18:48:38.095Z"
+        },
+        {
+            "id": "06720a13-11a2-4574-a447-8520cbb0e93c",
+            "text": "HMI",
+            "date": "2024-06-15T18:59:49.332Z"
+        },
+        {
+            "id": "26a6b97f-f8bd-4cdf-9267-dea2c4621c56",
+            "text": "Voice Assistant",
+            "date": "2024-06-15T19:00:18.140Z"
         }
     ],
     "connections": [
@@ -268,6 +283,30 @@
             ],
             "reason": "1pcs",
             "date": "2024-06-15T18:47:59.360Z"
+        },
+        {
+            "ids": [
+                "450601b6-df2f-480c-ba01-6a3025e34603",
+                "a94cc10b-b364-447e-95bd-db133e4a85e0"
+            ],
+            "reason": "Mine is small",
+            "date": "2024-06-15T18:49:02.597Z"
+        },
+        {
+            "ids": [
+                "9a354a5a-6ba7-48b1-9efd-9c506108a101",
+                "06720a13-11a2-4574-a447-8520cbb0e93c"
+            ],
+            "reason": "Advanced",
+            "date": "2024-06-15T18:59:59.712Z"
+        },
+        {
+            "ids": [
+                "06720a13-11a2-4574-a447-8520cbb0e93c",
+                "26a6b97f-f8bd-4cdf-9267-dea2c4621c56"
+            ],
+            "reason": "Straightforward",
+            "date": "2024-06-15T19:00:27.395Z"
         }
     ]
 }
