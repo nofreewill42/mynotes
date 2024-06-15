@@ -154,6 +154,26 @@
             "id": "b1dcb170-95c8-47c3-89d7-c92ab772d9b5",
             "text": "Papers",
             "date": "2024-06-15T19:20:51.681Z"
+        },
+        {
+            "id": "e0f21090-8177-4176-b5a3-1733ab3ece14",
+            "text": "Capsules",
+            "date": "2024-06-15T19:27:44.116Z"
+        },
+        {
+            "id": "3cebb4c8-6dab-4e8b-b683-e3b588690c3f",
+            "text": "Chess",
+            "date": "2024-06-15T19:27:49.444Z"
+        },
+        {
+            "id": "794bc6d8-2ddc-425a-9890-06e36b808e84",
+            "text": "A Mathematical Framework for Transformer Circuits",
+            "date": "2024-06-15T19:28:36.668Z"
+        },
+        {
+            "id": "52bcb64d-a8d9-48e0-8ad4-0f27b6e71d44",
+            "text": "In-context Learning and Induction Heads",
+            "date": "2024-06-15T19:28:55.449Z"
         }
     ],
     "connections": [
@@ -396,6 +416,30 @@
             ],
             "reason": "Body",
             "date": "2024-06-15T19:22:12.163Z"
+        },
+        {
+            "ids": [
+                "e0f21090-8177-4176-b5a3-1733ab3ece14",
+                "3cebb4c8-6dab-4e8b-b683-e3b588690c3f"
+            ],
+            "reason": "Track consumption vs chess history",
+            "date": "2024-06-15T19:28:14.268Z"
+        },
+        {
+            "ids": [
+                "b1dcb170-95c8-47c3-89d7-c92ab772d9b5",
+                "52bcb64d-a8d9-48e0-8ad4-0f27b6e71d44"
+            ],
+            "reason": "Training characteristics in-context",
+            "date": "2024-06-15T19:30:12.182Z"
+        },
+        {
+            "ids": [
+                "52bcb64d-a8d9-48e0-8ad4-0f27b6e71d44",
+                "794bc6d8-2ddc-425a-9890-06e36b808e84"
+            ],
+            "reason": "Prereq? - but very interesting and tanuls\u00e1gos, hopefully",
+            "date": "2024-06-15T19:31:02.435Z"
         }
     ]
 }
