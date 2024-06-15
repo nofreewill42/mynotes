@@ -184,6 +184,11 @@
             "id": "57b4e6ed-6fe4-4e3d-849f-e6726d811b46",
             "text": "Brushless motors",
             "date": "2024-06-15T20:36:13.360Z"
+        },
+        {
+            "id": "30528eb8-f365-4cbe-9310-24cd2bfb0b2d",
+            "text": "Open hours",
+            "date": "2024-06-15T22:46:06.179Z"
         }
     ],
     "connections": [
@@ -466,6 +471,14 @@
             ],
             "reason": "Start with",
             "date": "2024-06-15T20:36:22.112Z"
+        },
+        {
+            "ids": [
+                "06de28e3-5aea-471b-bcf3-ecb7f0d528ab",
+                "30528eb8-f365-4cbe-9310-24cd2bfb0b2d"
+            ],
+            "reason": "Save somewhere to prompt for",
+            "date": "2024-06-15T22:46:24.219Z"
         }
     ]
 }
