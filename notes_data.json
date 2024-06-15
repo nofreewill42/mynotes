@@ -31,11 +31,6 @@
             "date": "2024-06-15T12:32:34.933Z"
         },
         {
-            "id": "cbc9c407-17aa-4bfd-92ce-bdccf3a5cba3",
-            "text": "Do the laundry",
-            "date": "2024-06-15T12:33:20.989Z"
-        },
-        {
             "id": "06de28e3-5aea-471b-bcf3-ecb7f0d528ab",
             "text": "OTP card cafeteria",
             "date": "2024-06-15T12:38:10.726Z"
@@ -179,6 +174,11 @@
             "id": "45991b7a-82dd-4d70-914b-b98d40b28921",
             "text": "Kitchen",
             "date": "2024-06-15T19:53:58.341Z"
+        },
+        {
+            "id": "f4dbeeb7-5550-4e19-8fa4-5c5316e13971",
+            "text": "Bedding",
+            "date": "2024-06-15T19:55:56.763Z"
         }
     ],
     "connections": [
@@ -213,14 +213,6 @@
             ],
             "reason": "My turn",
             "date": "2024-06-15T12:32:46.605Z"
-        },
-        {
-            "ids": [
-                "fc897ed5-15b9-46e1-a731-3e0971ebf1aa",
-                "cbc9c407-17aa-4bfd-92ce-bdccf3a5cba3"
-            ],
-            "reason": "Need them clean",
-            "date": "2024-06-15T12:33:34.728Z"
         },
         {
             "ids": [
@@ -453,6 +445,14 @@
             ],
             "reason": "Tidy up",
             "date": "2024-06-15T19:54:07.870Z"
+        },
+        {
+            "ids": [
+                "f4dbeeb7-5550-4e19-8fa4-5c5316e13971",
+                "a94cc10b-b364-447e-95bd-db133e4a85e0"
+            ],
+            "reason": "Have more pcs",
+            "date": "2024-06-15T19:56:11.541Z"
         }
     ]
 }
