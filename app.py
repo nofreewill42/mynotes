@@ -20,14 +20,16 @@ def index():
 @app.route('/data', methods=['GET', 'POST'])
 def manage_data():
     if request.method == 'POST':
-        data = request.json
+        data = request.json.get('data')
+        commit_message = request.json.get('commit_message', 'Updated notes and connections')
+        
         with open(DATA_FILE, 'w') as f:
             json.dump(data, f, indent=4)
 
         # Commit the changes to git
         repo = git.Repo(os.getcwd())
         repo.git.add(DATA_FILE)
-        repo.index.commit("Updated notes and connections")
+        repo.index.commit(commit_message)
 
         return jsonify({'status': 'success'}), 201
 

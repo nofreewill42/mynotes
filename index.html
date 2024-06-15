@@ -15,6 +15,10 @@
             height: 100%;
             border: 1px solid #ddd;
         }
+        .vis-button {
+            margin: 5px;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
@@ -30,10 +34,21 @@
 
         // Function to save data to the Flask server
         async function saveData() {
+            // Custom prompt for commit message
+            const commitMessage = prompt("Enter commit message:", "Updated notes and connections");
+            if (commitMessage === null) {
+                // User cancelled the prompt
+                return;
+            }
+            
             const data = {
-                notes: nodes.get().map(node => ({ id: node.id, text: node.label, date: node.date })),
-                connections: edges.get().map(edge => ({ ids: [edge.from, edge.to], reason: edge.label, date: edge.date }))
+                data: {
+                    notes: nodes.get().map(node => ({ id: node.id, text: node.label, date: node.date })),
+                    connections: edges.get().map(edge => ({ ids: [edge.from, edge.to], reason: edge.label, date: edge.date }))
+                },
+                commit_message: commitMessage
             };
+
             const response = await fetch('/data', {
                 method: 'POST',
                 headers: {
@@ -41,6 +56,7 @@
                 },
                 body: JSON.stringify(data)
             });
+
             if (response.ok) {
                 alert('Data saved successfully!');
             } else {
