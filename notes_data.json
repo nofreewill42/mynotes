@@ -26,11 +26,6 @@
             "date": "2024-06-15T12:31:32.681Z"
         },
         {
-            "id": "2726cd94-2b5c-4e3d-9ac5-2e678b9780dc",
-            "text": "Take out the trash",
-            "date": "2024-06-15T12:32:34.933Z"
-        },
-        {
             "id": "06de28e3-5aea-471b-bcf3-ecb7f0d528ab",
             "text": "OTP card cafeteria",
             "date": "2024-06-15T12:38:10.726Z"
@@ -215,14 +210,6 @@
             ],
             "reason": "My room is a mess",
             "date": "2024-06-15T12:32:16.864Z"
-        },
-        {
-            "ids": [
-                "fc897ed5-15b9-46e1-a731-3e0971ebf1aa",
-                "2726cd94-2b5c-4e3d-9ac5-2e678b9780dc"
-            ],
-            "reason": "My turn",
-            "date": "2024-06-15T12:32:46.605Z"
         },
         {
             "ids": [
