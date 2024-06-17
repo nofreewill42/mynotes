@@ -179,6 +179,11 @@
             "id": "30528eb8-f365-4cbe-9310-24cd2bfb0b2d",
             "text": "Open hours",
             "date": "2024-06-15T22:46:06.179Z"
+        },
+        {
+            "id": "a78311eb-1725-427b-88b0-0d9cf46f0ebd",
+            "text": "Life as LLM context",
+            "date": "2024-06-17T14:46:10.840Z"
         }
     ],
     "connections": [
@@ -453,6 +458,22 @@
             ],
             "reason": "Save somewhere to prompt for",
             "date": "2024-06-15T22:46:24.219Z"
+        },
+        {
+            "ids": [
+                "a78311eb-1725-427b-88b0-0d9cf46f0ebd",
+                "3eb0a7cf-7e57-4e79-829c-7c8a6f09108b"
+            ],
+            "reason": "Document in blog",
+            "date": "2024-06-17T14:46:42.400Z"
+        },
+        {
+            "ids": [
+                "06de28e3-5aea-471b-bcf3-ecb7f0d528ab",
+                "3eb0a7cf-7e57-4e79-829c-7c8a6f09108b"
+            ],
+            "reason": "Ain't work",
+            "date": "2024-06-17T14:48:02.294Z"
         }
     ]
 }
