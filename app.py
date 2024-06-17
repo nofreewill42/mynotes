@@ -35,5 +35,13 @@ def manage_data():
 
     return send_from_directory('', 'notes_data.json')
 
+@app.route('/check-file', methods=['POST'])
+def check_file():
+    node_name = request.json['node_name']
+    filename = f"markup_files/{node_name.replace(' ', '_')}.md"
+    file_exists = os.path.isfile(filename)
+    return jsonify({'exists': file_exists})
+
 if __name__ == '__main__':
     app.run(debug=True)
+    

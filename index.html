@@ -82,74 +82,34 @@
                 const container = document.getElementById('mynetwork');
                 const networkData = { nodes, edges };
                 const options = {
-                    interaction: {
-                        dragNodes: true,  // Allow node dragging
-                        dragView: true,  // Allow dragging the view (panning)
-                        hover: true  // Change cursor style on hover
-                    },
-                    physics: {
-                        enabled: true,  // Enable physics
-                        stabilization: {
-                            enabled: true,
-                            iterations: 1000  // Number of stabilization iterations
-                        }
-                    },
-                    manipulation: {
-                        enabled: true,
-                        initiallyActive: true,
-                        addNode: function (data, callback) {
-                            var text = prompt("Enter text for new node:", "New Node");
-                            if (text) {
-                                data.label = text;
-                                data.date = new Date().toISOString();  // Add the current date
-                                callback(data);
-                            }
-                        },
-                        editNode: function (data, callback) {
-                            var text = prompt("Edit text for node:", data.label);
-                            if (text) {
-                                data.label = text;
-                                callback(data);
-                            }
-                        },
-                        addEdge: function (data, callback) {
-                            if (data.from === data.to) {
-                                var r = confirm("Do you want to connect the node to itself?");
-                                if (r === true) {
-                                    var text = prompt("Enter text for new edge:", "New Edge");
-                                    if (text) {
-                                        data.label = text;
-                                        data.date = new Date().toISOString();  // Add the current date
-                                        callback(data);
-                                    }
-                                }
-                            } else {
-                                var text = prompt("Enter text for new edge:", "New Edge");
-                                if (text) {
-                                    data.label = text;
-                                    data.date = new Date().toISOString();  // Add the current date
-                                    callback(data);
-                                }
-                            }
-                        },
-                        editEdge: {
-                            editWithoutDrag: function (data, callback) {
-                                var text = prompt("Edit text for edge:", data.label);
-                                if (text) {
-                                    data.label = text;
-                                    callback(data);
-                                }
-                            }
-                        },
-                        deleteNode: true,
-                        deleteEdge: true,
-                        controlNodeStyle: {
-                            // All node styles
+                    nodes: {
+                        font: {
+                            multi: 'html'
                         }
                     }
                 };
 
                 network = new vis.Network(container, networkData, options);
+
+                // Check if the markdown file exists and update the label
+                nodes.forEach(async function(node) {
+                    let response = await fetch('/check-file', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ node_name: node.label })
+                    });
+
+                    let result = await response.json();
+                    if (result.exists) {
+                        let safeLabel = node.label.replace(/ /g, '_');
+                        nodes.update({
+                            id: node.id,
+                            label: `<a href="./markup_files/${safeLabel}.md" target="_blank">${node.label}</a>`
+                        });
+                    }
+                });
 
                 // Add custom Save button
                 network.on("afterDrawing", function() {
