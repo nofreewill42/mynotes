@@ -101,11 +101,6 @@
             "date": "2024-06-15T18:47:00.892Z"
         },
         {
-            "id": "faa7664c-6037-4eca-ae90-7dccec6cef3b",
-            "text": "Peanut butter",
-            "date": "2024-06-15T18:47:30.343Z"
-        },
-        {
             "id": "450601b6-df2f-480c-ba01-6a3025e34603",
             "text": "Haircutter Razor",
             "date": "2024-06-15T18:48:38.095Z"
@@ -324,14 +319,6 @@
             ],
             "reason": "List",
             "date": "2024-06-15T18:47:22.415Z"
-        },
-        {
-            "ids": [
-                "faa7664c-6037-4eca-ae90-7dccec6cef3b",
-                "a94cc10b-b364-447e-95bd-db133e4a85e0"
-            ],
-            "reason": "1pcs",
-            "date": "2024-06-15T18:47:59.360Z"
         },
         {
             "ids": [
