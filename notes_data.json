@@ -166,11 +166,6 @@
             "date": "2024-06-15T19:28:55.449Z"
         },
         {
-            "id": "45991b7a-82dd-4d70-914b-b98d40b28921",
-            "text": "Kitchen",
-            "date": "2024-06-15T19:53:58.341Z"
-        },
-        {
             "id": "f4dbeeb7-5550-4e19-8fa4-5c5316e13971",
             "text": "Bedding",
             "date": "2024-06-15T19:55:56.763Z"
@@ -434,14 +429,6 @@
             ],
             "reason": "Prereq? - but very interesting and tanuls\u00e1gos, hopefully",
             "date": "2024-06-15T19:31:02.435Z"
-        },
-        {
-            "ids": [
-                "3eb0a7cf-7e57-4e79-829c-7c8a6f09108b",
-                "45991b7a-82dd-4d70-914b-b98d40b28921"
-            ],
-            "reason": "Tidy up",
-            "date": "2024-06-15T19:54:07.870Z"
         },
         {
             "ids": [
