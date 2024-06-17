@@ -184,6 +184,16 @@
             "id": "a78311eb-1725-427b-88b0-0d9cf46f0ebd",
             "text": "Life as LLM context",
             "date": "2024-06-17T14:46:10.840Z"
+        },
+        {
+            "id": "9992fcfa-9dc5-4256-ab69-c90e3c66672b",
+            "text": "Paraphraser",
+            "date": "2024-06-17T14:50:34.211Z"
+        },
+        {
+            "id": "d8635c9b-e134-414c-bf1b-fb50d0fb1b6d",
+            "text": "Read confluence",
+            "date": "2024-06-17T14:52:33.217Z"
         }
     ],
     "connections": [
@@ -474,6 +484,30 @@
             ],
             "reason": "Ain't work",
             "date": "2024-06-17T14:48:02.294Z"
+        },
+        {
+            "ids": [
+                "a78311eb-1725-427b-88b0-0d9cf46f0ebd",
+                "db83bb91-4e80-42b6-ae56-7ac5d3a87751"
+            ],
+            "reason": "LLM development",
+            "date": "2024-06-17T14:49:16.853Z"
+        },
+        {
+            "ids": [
+                "9992fcfa-9dc5-4256-ab69-c90e3c66672b",
+                "db83bb91-4e80-42b6-ae56-7ac5d3a87751"
+            ],
+            "reason": "CI/CD",
+            "date": "2024-06-17T14:50:57.859Z"
+        },
+        {
+            "ids": [
+                "d8635c9b-e134-414c-bf1b-fb50d0fb1b6d",
+                "db83bb91-4e80-42b6-ae56-7ac5d3a87751"
+            ],
+            "reason": "Voice Team",
+            "date": "2024-06-17T14:52:43.489Z"
         }
     ]
 }
